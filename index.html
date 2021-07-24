@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap" rel="stylesheet">
     <title>DrivenEats</title>
+    <script src="js/script.js"></script>
 </head>
 <body>
 
@@ -23,75 +24,86 @@
         <div class="pratos">
             <p class="titulo-comida">Primeiro, seu prato</p>
             <div class="pratos-conteudo">
-                <div class="prato-individual">
-                    <img src="css/img/frango_yin_yang 1.png">
-                    <p class="titulo-prato">Frango ying yang</p>
-                    <span class="legenda-prato">Um pouco de batata,um pouco de salada</span>
-                    <p class="preco">R$14,90</p>
-                </div>
-                <div class="prato-individual">
-                    <img src="css/img/frango_yin_yang 1.png">
-                    <p class="titulo-prato">Frango ying yang</p>
-                    <span class="legenda-prato">Um pouco de batata,um pouco de salada</span>
-                    <p class="preco">R$14,90</p>
-                </div>
-                <div class="prato-individual">
-                    <img src="css/img/frango_yin_yang 1.png">
-                    <p class="titulo-prato">Frango ying yang</p>
-                    <span class="legenda-prato">Um pouco de batata,um pouco de salada</span>
-                    <p class="preco">R$14,90</p>
-                </div>
+                    <div class="prato-individual" onclick="selecionar(this);">
+                        <img src="css/img/frango_yin_yang 1.png">
+                        <p class="titulo-prato">Frango ying yang</p>
+                        <span class="legenda-prato">Um pouco de batata,um pouco de salada</span>
+                        <p class="preco">R$14,90</p>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>            
+                    <div class="prato-individual"  onclick="selecionar(this);">
+                        <img src="css/img/frango_yin_yang 1.png">
+                        <p class="titulo-prato">Frango ying yang</p>
+                        <span class="legenda-prato">Um pouco de batata,um pouco de salada</span>
+                        <p class="preco">R$14,90</p>
+                        <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+                    </div> 
+                    <div class="prato-individual"  onclick="selecionar(this);">
+                        <img src="css/img/frango_yin_yang 1.png">
+                        <p class="titulo-prato">Frango ying yang</p>
+                        <span class="legenda-prato">Um pouco de batata,um pouco de salada</span>
+                        <p class="preco">R$14,90</p>
+                        <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+                    </div> 
             </div>
         </div>
-        <div class="pratos">
+        <div class="pratos bebidas">
             <p class="titulo-comida">Agora, sua bebida</p>
-            <div class="pratos-conteudo">
-                <div class="prato-individual">
-                    <img src="css/img/coquinha_gelada 1.png">
-                    <p class="titulo-prato">Coquinha gelada</p>
-                    <span class="legenda-prato">Lata 350ml</span>
-                    <p class="preco">R$4,90</p>
-                </div>
-                <div class="prato-individual">
-                    <img src="css/img/coquinha_gelada 1.png">
-                    <p class="titulo-prato">Coquinha gelada</p>
-                    <span class="legenda-prato">Lata 350ml</span>
-                    <p class="preco">R$4,90</p>
-                </div>
-                <div class="prato-individual">
-                    <img src="css/img/coquinha_gelada 1.png">
-                    <p class="titulo-prato">Coquinha gelada</p>
-                    <span class="legenda-prato">Lata 350ml</span>
-                    <p class="preco">R$4,90</p>
-                </div>
+            <div class="pratos-conteudo bebida">
+                    <div class="prato-individual "  onclick="selecionarBebida(this);">
+                        <img src="css/img/coquinha_gelada 1.png">
+                        <p class="titulo-prato">Coquinha gelada</p>
+                        <span class="legenda-prato">Lata 350ml</span>
+                        <p class="preco">R$4,90</p>
+                        <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+                    </div>
+                    <div class="prato-individual"  onclick="selecionarBebida(this);">
+                        <img src="css/img/coquinha_gelada 1.png">
+                        <p class="titulo-prato">Coquinha gelada</p>
+                        <span class="legenda-prato">Lata 350ml</span>
+                        <p class="preco">R$4,90</p>
+                        <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+                    </div>
+                    <div class="prato-individual"  onclick="selecionarBebida(this);">
+                        <img src="css/img/coquinha_gelada 1.png">
+                        <p class="titulo-prato">Coquinha gelada</p>
+                        <span class="legenda-prato">Lata 350ml</span>
+                        <p class="preco">R$4,90</p>
+                        <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+                    </div>
             </div>
         </div>
-        <div class="pratos">
+        <div class="pratos sobremesas">
             <p class="titulo-comida">Por fim, sua sobremesa</p>
-            <div class="pratos-conteudo">
-                <div class="prato-individual">
-                    <img src="css/img/pudim 1.png">
-                    <p class="titulo-prato">Pudim</p>
-                    <span class="legenda-prato">Apenas pudim</span>
-                    <p class="preco">R$7,90</p>
-                </div>
-                <div class="prato-individual">
-                    <img src="css/img/pudim 1.png">
-                    <p class="titulo-prato">Pudim</p>
-                    <span class="legenda-prato">Apenas pudim</span>
-                    <p class="preco">R$7,90</p>
-                </div>
-                <div class="prato-individual">
-                    <img src="css/img/pudim 1.png">
-                    <p class="titulo-prato">Pudim</p>
-                    <span class="legenda-prato">Apenas pudim</span>
-                    <p class="preco">R$7,90</p>
-                </div>
+            <div class="pratos-conteudo sobremesa">
+                    <div class="prato-individual "  onclick="selecionarSobremesa(this);">
+                        <img src="css/img/pudim 1.png">
+                        <p class="titulo-prato">Pudim</p>
+                        <span class="legenda-prato">Apenas pudim</span>
+                        <p class="preco">R$7,90</p>
+                        <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+                    </div>
+                    <div class="prato-individual "  onclick="selecionarSobremesa(this);">
+                        <img src="css/img/pudim 1.png">
+                        <p class="titulo-prato">Pudim</p>
+                        <span class="legenda-prato">Apenas pudim</span>
+                        <p class="preco">R$7,90</p>
+                        <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+                    </div>
+                    <div class="prato-individual"  onclick="selecionarSobremesa(this);">
+                        <img src="css/img/pudim 1.png">
+                        <p class="titulo-prato">Pudim</p>
+                        <span class="legenda-prato">Apenas pudim</span>
+                        <p class="preco">R$7,90</p>
+                        <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+                    </div>
             </div>
         </div>
         <div class="selecionar">
             <button class="selet">Selecione os 3 itens para fechar o pedido</button>
         </div>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
