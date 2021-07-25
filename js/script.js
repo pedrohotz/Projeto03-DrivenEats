@@ -2,10 +2,11 @@ let botaoCompra = 0;
 let refeicao;
 let bebida;
 let sobremesa;
-let valorTotal = 0;
+let total = 0;
 let valorPrato = 0;
 let valorSobremesa = 0;
 let valorBebida = 0;
+
 function selecionar(elemento){
     const selecionado = document.querySelector(".comida .selecionado");
     if(selecionado !== null){
@@ -64,9 +65,13 @@ function selecionarSobremesa(elemento){
 
 function habilitarCompra(){
     if (botaoCompra === 3){
-        valorTotal = valorPrato + valorBebida + valorSobremesa;
+        let valorTotal = valorPrato + valorBebida + valorSobremesa;
+        total = valorTotal.toFixed(2);
         const botao = document.querySelector(".selet");
-        botao.innerHTML = "Fechar Pedido";
-        botao.classList.add("habilitado");
+        const botaoHabilitado = document.querySelector(".botao-habilitado");
+        botao.classList.add("desabilitado");
+        botao.classList.remove("habilitado");
+        botaoHabilitado.classList.remove("desabilitado");
+
     }
 }

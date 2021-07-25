@@ -135,11 +135,23 @@ body{
 .escondido {
     display: none;
 }
+.desabilitado {
+    display: none;
+}
 
 .habilitado{
+    font-size: 20px;
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    text-align: center;
     background-color: #32B72F;
+    border-radius: 50px;
+    width: 364px;
+    height: 61px;
+    border: none;
 }
 
 .mostrar {
     display: flex;
 }
+
