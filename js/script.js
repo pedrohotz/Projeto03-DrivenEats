@@ -6,6 +6,8 @@ let total = 0;
 let valorPrato = 0;
 let valorSobremesa = 0;
 let valorBebida = 0;
+let nome;
+let endereço;
 
 function selecionar(elemento){
     const selecionado = document.querySelector(".comida .selecionado");
@@ -21,6 +23,7 @@ function selecionar(elemento){
     refeicao = prato.innerHTML;
     let preco = elemento.querySelector(".comida .preco");
     let valor = preco.innerHTML;
+    console.log(valor);
     valorPrato = parseFloat(valor);
     habilitarCompra();
 }
@@ -74,4 +77,17 @@ function habilitarCompra(){
         botaoHabilitado.classList.remove("desabilitado");
 
     }
+}
+
+function fecharPedido(){
+    nome = prompt("Qual seu nome?");
+    endereço = prompt("Digite o endereço");
+    const mensagemPardrão = encodeURIComponent(`Olá, gostaria de fazer o pedido:\n
+    - Prato: ${refeicao}\n
+    - Bebida: ${bebida}\n
+    - Sobremesa: ${sobremesa}\n
+    Total: R$ ${total}\n
+    Nome: ${nome}\n
+    Endereço: ${endereço}`);
+    window.location.href = `https://wa.me/5532984878558?text=${mensagemPardrão}`;
 }
