@@ -57,6 +57,7 @@ body{
 .pratos-conteudo{
     display: flex;
     overflow-x: scroll;
+    width: 100%;
 }
 .prato-individual{
     position: relative;
@@ -115,6 +116,7 @@ body{
 .selecionado{
     border: 4px solid #32B72F;
     border-radius: 9px;
+    display: flex;
 }
 
 .prato-individual ion-icon{
@@ -124,7 +126,20 @@ body{
     right: 8px;
     bottom: 10px;
 }   
-
+.valores {
+    display: flex;
+}
+.real{
+    margin-right: 5px;
+}
 .escondido {
     display: none;
+}
+
+.habilitado{
+    background-color: #32B72F;
+}
+
+.mostrar {
+    display: flex;
 }
