@@ -11,16 +11,14 @@ let endereço;
 
 function selecionar(elemento){
     const selecionado = document.querySelector(".comida .selecionado");
-    const icone = document.querySelector(".esconder-icone");
+    console.log(selecionado);
     if(selecionado !== null){
         selecionado.classList.remove("selecionado");
         botaoCompra--;
-        if(icone == null){
-            icone.classList.add("esconder-icone");
-        }
+        selecionado.classList.add("esconder")
     }
     elemento.classList.add("selecionado");
-    icone.classList.remove("esconder-icone");
+    elemento.classList.remove("esconder")
     if(elemento.classList.contains("selecionado")){
         botaoCompra++;
     }
@@ -39,8 +37,10 @@ function selecionarBebida(elemento){
     if(selecionado !== null){
         selecionado.classList.remove("selecionado")
         botaoCompra--;
+        selecionado.classList.add("esconder")
     }
     elemento.classList.add("selecionado");
+    elemento.classList.remove("esconder")
     if(elemento.classList.contains("selecionado")){
         botaoCompra++;
     }
@@ -56,10 +56,12 @@ function selecionarBebida(elemento){
 function selecionarSobremesa(elemento){
     const selecionado = document.querySelector(".sobremesa .selecionado");
     if(selecionado !== null){
-        selecionado.classList.remove("selecionado")
+        selecionado.classList.remove("selecionado");
+        selecionado.classList.add("esconder");
         botaoCompra--;
     }
     elemento.classList.add("selecionado");
+    elemento.classList.remove("esconder");
     if(elemento.classList.contains("selecionado")){
         botaoCompra++;
     }
