@@ -11,11 +11,16 @@ let endereço;
 
 function selecionar(elemento){
     const selecionado = document.querySelector(".comida .selecionado");
+    const icone = document.querySelector(".esconder-icone");
     if(selecionado !== null){
         selecionado.classList.remove("selecionado");
         botaoCompra--;
+        if(icone == null){
+            icone.classList.add("esconder-icone");
+        }
     }
     elemento.classList.add("selecionado");
+    icone.classList.remove("esconder-icone");
     if(elemento.classList.contains("selecionado")){
         botaoCompra++;
     }
@@ -77,6 +82,30 @@ function habilitarCompra(){
         botaoHabilitado.classList.remove("desabilitado");
 
     }
+}
+
+function confirmarPedido(){
+    let telaConfirma = document.querySelector(".escondido");
+    let comida = document.querySelector(".comida");
+    let bebidaF = document.querySelector(".bebida");
+    let sobremesaF = document.querySelector(".sobremesa");
+    let valorC = document.querySelector(".valorComida");
+    let valorB = document.querySelector(".valorBebida");
+    let valorS = document.querySelector(".valorSobremesa");
+    let totalP = document.querySelector(".valorTotal");
+    telaConfirma.classList.remove("escondido");
+    comida.innerHTML = refeicao;
+    bebidaF.innerHTML = bebida;
+    sobremesaF.innerHTML = sobremesa;
+    totalP.innerHTML = "R$ " + total;
+    valorC.innerHTML = valorPrato.toFixed(2);
+    valorB.innerHTML = valorBebida.toFixed(2);;
+    valorS.innerHTML = valorSobremesa.toFixed(2);;
+}
+
+function cancelar(){
+    let telaConfirma = document.querySelector(".caixa-tela");
+    telaConfirma.classList.add("escondido");
 }
 
 function fecharPedido(){
